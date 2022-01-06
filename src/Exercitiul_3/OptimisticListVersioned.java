@@ -239,7 +239,7 @@ public class OptimisticListVersioned<T> {
                 return false;
 
             if (predInitial == pred.version.get() && currentInitial == current.version.get() &&
-                    pred.next.version.get() == current.version.get())
+                    pred.next == current)
                 return true;
 
             Node entry = head;
